@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'ChelseaMarket';
+  src: url('../assets/font/ChelseaMarket-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GFSDidot';
+    src: url('../assets/font/GFSDidot-Regular.ttf') format('truetype');
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'GFS Didot';
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    background: white;
+    position: relative;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    width: 25px;
+    height: 25px;
+}
+
+.navbar-title {
+    font-family: 'GFS Didot';
+    font-size: 17px;
+}
+
+.acbar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.searchbar {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    width: 40%;
+    min-width: 200px;
+    max-width: 500px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+}
+
+.accessbar {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin-left: auto;
+    position: fixed;
+    left: 70%;
+}
+
+.navbtn {
+    padding: 5px 8px;
+}
+
+.loginBtn {
+    padding: 10px;
+}
+
+.loginTxt {
+    font-size: 13px;
+}
