@@ -18,15 +18,48 @@ a {
 }
 
 h1, h2, h3, h4, h5{
-    font-family: Arial;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    font-family: Calibri;
 }
 
 button {
-    padding: 12px;
+    padding: 12px 20px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 1px solid #333;
     background-color: rgb(255, 174, 174);
+    color: #333;
+    font-family: 'GFS Didot';
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcccc;
+    border-color: #000;
+}
+
+.dark-mode button {
+    background-color: #555;
+    color: #ffffff;
+    border-color: #777;
+}
+
+.dark-mode button:hover {
+    background-color: #777;
+    border-color: #999;
+}
+
+/* Ensure consistent text colors in dark mode */
+.dark-mode a {
+    color: #ffffff;
+}
+
+.dark-mode .menu {
+    color: #ffffff;
+}
+
+.dark-mode .title {
+    color: #ffffff;
 }
 
 .topbar {
@@ -35,6 +68,7 @@ button {
     width: 100%;
     padding: 8px;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 .logo {
@@ -66,13 +100,16 @@ button {
 }
 
 .titlebox {
-  display: flex;
-  position: absolute;
-  padding: 100px;
-  top: 85px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;            
+    display: flex;
+    position: absolute;
+    padding: 100px;
+    top: 85px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    transition: background-color 0.3s ease;
 }
 
 .tagline { 
@@ -93,4 +130,74 @@ button {
     width: 850px;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.footer-text {
+    text-align: center;
+    padding: 20px;
+    background-color: #e7e7e7;
+    font-family: 'GFS Didot';
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}/* ...existing code... */
+
+button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: rgb(255, 174, 174);
+    color: #333;
+    font-family: 'GFS Didot';
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+}
+
+#dark-mode-toggle {
+    margin-right: 10px;
+}
+
+/* ...existing code... */
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .topbar {
+    background-color: #333;
+}
+
+.dark-mode .titlebox {
+    background-color: #121212;
+}
+
+.dark-mode .footer-text {
+    background-color: #333;
+    color: #ffffff;
 }
